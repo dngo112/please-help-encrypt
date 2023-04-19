@@ -1,0 +1,24 @@
+{
+  "name": "please-help-encrypt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dngo112/please-help-encrypt.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dngo112/please-help-encrypt/issues"
+  },
+  "homepage": "https://github.com/dngo112/please-help-encrypt#readme",
+  "dependencies": {
+    "@types/crypto-js": "^4.1.1",
+    "@types/node": "^18.15.11",
+    "crypto-js": "^4.1.1"
+  }
+}
