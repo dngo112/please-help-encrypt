@@ -43,9 +43,8 @@ function encryptDataWithCryptoJS(toEncrypt: string) {
 
   const key = CryptoJS.enc.Hex.parse(cipherKey);
   const iv = CryptoJS.enc.Hex.parse(cipherSalt);
-  const data = toEncrypt;
 
-  const encrypted = CryptoJS.AES.encrypt(data, key, {
+  const encrypted = CryptoJS.AES.encrypt(toEncrypt, key, {
     iv,
     mode: CryptoJS.mode.CBC,
     padding: CryptoJS.pad.ZeroPadding,
