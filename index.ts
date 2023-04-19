@@ -1,21 +1,6 @@
 import crypto from 'crypto';
 import CryptoJS from 'crypto-js';
 
-function encryptData(toEncrypt: string): string {
-  // In 1Password under "Danny Encrypt Help"
-  const cipherKey = '';
-  // In 1Password under "Danny Encrypt Help"
-  const cipherSalt = '';
-
-  const key = Buffer.from(cipherKey, 'hex');
-  const iv = Buffer.from(cipherSalt, 'hex');
-
-  const cipher = crypto.createCipheriv('aes-256-cbc', key, iv, {});
-  const encrypted = Buffer.concat([cipher.update(toEncrypt), cipher.final()]);
-
-  return encrypted.toString('hex');
-}
-
 function encryptDataWithZeroPadding(toEncrypt: string): string {
   // In 1Password under "Danny Encrypt Help"
   const cipherKey = '';
@@ -59,6 +44,5 @@ function zeroPadding(blockSize: number, buf: Buffer) {
   return Buffer.concat([buf, padding]);
 }
 
-console.log('encryptData:', encryptData('666000752'));
 console.log('encryptDataWithZeroPadding:', encryptDataWithZeroPadding('666000752'));
 console.log('encryptDataWithCryptoJS:', encryptDataWithCryptoJS('666000752'));
